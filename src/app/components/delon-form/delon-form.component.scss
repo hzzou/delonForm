@@ -1,0 +1,13 @@
+.delon-form{
+  .top-header{
+    text-align: center;
+    margin: 40px auto;
+    font-size: 30px;
+  }
+  ::ng-deep .delon-btn{
+    text-align: center;
+    .ant-btn{
+      margin-right: 20px;
+    }
+  }
+}

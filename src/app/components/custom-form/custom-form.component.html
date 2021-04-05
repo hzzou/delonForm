@@ -1,0 +1,15 @@
+<sf-item-wrap [id]="id" [ui]="ui" [schema]="schema" [showError]="showError" [error]="error">
+  <div nz-row class="input-item">
+    <div nz-col [nzSpan]="8" class="item-left">
+      {{schema.title+':'}}
+    </div>
+    <div nz-col [nzSpan]="ui?.spanControl" class="item-right">
+      <input
+        nz-input
+        [type]="ui.type"
+        [placeholder]="ui.placeholder"
+        [maxLength]="schema.maxLength"
+      />
+    </div>
+  </div>
+</sf-item-wrap>

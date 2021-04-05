@@ -1,0 +1,16 @@
+<div class="delon-form">
+  <header class="top-header">delon表单</header>
+  <article>
+    <sf [schema]="schema"
+        [ui]="ui"
+        [formData]="formData"
+        [layout]="layout"
+        [button]="sfBtn"
+        (formReset)="handleReset()"
+        (formSubmit)="handleData($event)">
+<!--      <button type="submit" nz-button nzType="primary"  style="margin-right: 20px">保存</button>-->
+<!--      <button type="reset" nz-button >重置</button>-->
+<!--      <div>button的值为null或undefined时,使用容器包裹，即默认给留出左边的label占位，反之，不留</div>-->
+    </sf>
+  </article>
+</div>
