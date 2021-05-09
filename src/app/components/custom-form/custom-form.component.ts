@@ -9,15 +9,19 @@ import {ControlUIWidget, SFCustomWidgetSchema} from '@delon/form';
 export class CustomFormComponent extends ControlUIWidget<SFCustomWidgetSchema> implements OnInit {
   static readonly KEY = 'hz-custom-form';
 
-  // 继承自widget
+  // 属性继承自widget
   id;
   schema;
   ui;
   showError = false;
   error;
+  formProperty;
 
   ngOnInit() {
     console.log(this.ui);
+    console.log(this.schema);
+    console.log(this.id);
+    console.log(this.formProperty);
   }
 
 }

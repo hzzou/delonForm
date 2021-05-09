@@ -26,10 +26,10 @@ export class DelonFormComponent implements OnInit {
             errors: {
               required: '请填名字'
             },
-            // spanLabelFixed: 100,
-            // spanControl: 10,
+            spanLabel: 5,
+            spanControl: 24,
             placeholder: '名字',
-            // widget: 'hz-custom-form'
+            widget: 'hz-custom-form'
           }
         },
         password: {
@@ -41,7 +41,7 @@ export class DelonFormComponent implements OnInit {
             validator: (value) => {
               return !value ? [{keyword: 'required', message: '必填密码'}] : [];
             },
-            widget: 'hz-custom-form',
+            // widget: 'hz-custom-form',
             spanLabelFixed: 100,
             spanControl: 10,
             placeholder: '密码'
@@ -57,7 +57,7 @@ export class DelonFormComponent implements OnInit {
               return !value ? [{keyword: 'required', message: '必填邮箱'}] : [];
             },
             // widget: 'hz-custom-form',
-            // spanLabelFixed: 100,
+            spanLabelFixed: 100,
             spanControl: 10
           }
         }
@@ -67,7 +67,7 @@ export class DelonFormComponent implements OnInit {
 
     this.sfBtn = {
       submit: '提交',
-      submit_type: 'primary',
+      // submit_type: 'primary',
       reset: '重置',
       reset_type: 'danger',
       render: {
@@ -76,14 +76,17 @@ export class DelonFormComponent implements OnInit {
       }
     };
 
+    // sf全局的ui
     this.ui = {
       spanLabel: 4,
-      spanControl: 8
+      spanControl: 20
     };
 
     // 默认值
     this.formData = {
-      name: '邹兴鸿'
+      name: '邹兴鸿',
+      password: '123',
+      email: '987565275@qq.com'
     };
     this.layout = 'horizontal';
   }

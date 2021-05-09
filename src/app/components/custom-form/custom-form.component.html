@@ -1,15 +1,21 @@
-<sf-item-wrap [id]="id" [ui]="ui" [schema]="schema" [showError]="showError" [error]="error">
+<sf-item-wrap [id]="id"
+              [ui]="ui"
+              [schema]="schema"
+              [showError]="showError" [error]="error">
   <div nz-row class="input-item">
-    <div nz-col [nzSpan]="8" class="item-left">
+    <div nz-col class="item-left" [nzSpan]="4">
       {{schema.title+':'}}
     </div>
-    <div nz-col [nzSpan]="ui?.spanControl" class="item-right">
+    <div nz-col [nzSpan]="10" class="item-right">
       <input
         nz-input
         [type]="ui.type"
+        [(ngModel)]="formProperty.formData"
+        (ngModelChange)="setValue($event)"
         [placeholder]="ui.placeholder"
         [maxLength]="schema.maxLength"
       />
     </div>
   </div>
+<!--  <div class="error" *ngIf="showError">{{ui?.errors?.required}}</div>-->
 </sf-item-wrap>
